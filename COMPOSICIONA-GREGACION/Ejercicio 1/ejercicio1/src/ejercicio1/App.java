@@ -2,6 +2,7 @@ package ejercicio1;
 
 public class App {
     public static void main(String[] args) {
+        // b) Crear casa y agregar habitaciones
         Casa casa = new Casa("Av. Siempre Viva 742");
 
         Habitacion h1 = new Habitacion("Sala", 20.5);
@@ -12,6 +13,7 @@ public class App {
         casa.agregarHabitacion(h2);
         casa.agregarHabitacion(h3);
 
+        // c) Mostrar información casa y habitaciones
         casa.mostrarCasa();
     }
 }

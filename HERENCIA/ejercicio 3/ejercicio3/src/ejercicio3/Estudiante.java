@@ -1,10 +1,14 @@
 package ejercicio3;
 
+// Estudiante (hereda de Persona) <ru, fecha_Ingreso, semestre>
+
 public class Estudiante extends Persona {
+    // a) Atributos específicos de Estudiante
     private String ru;
     private String fechaIngreso;
     private int semestre;
 
+    // a) Constructor por defecto
     public Estudiante() {
         super();
         this.ru = "";
@@ -12,6 +16,7 @@ public class Estudiante extends Persona {
         this.semestre = 0;
     }
 
+    // a) Constructor con parámetros
     public Estudiante(String ci, String nombre, String apellido, String celular, String fechaNac,
                       String ru, String fechaIngreso, int semestre) {
         super(ci, nombre, apellido, celular, fechaNac);
@@ -20,6 +25,7 @@ public class Estudiante extends Persona {
         this.semestre = semestre;
     }
 
+    // b) Método mostrar()
     @Override
     public void mostrar() {
         super.mostrar();

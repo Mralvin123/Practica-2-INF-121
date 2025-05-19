@@ -1,3 +1,17 @@
+# 5. Definir las siguientes clases:
+# Empleado<nombre, apellido, salario_base, años_antigüedad>
+# Métodos: calcular_salario() (retorna el salario base más un bono del 5% por cada año de antigüedad)
+# Gerente (hereda de Empleado)<departamento, bono_gerencial>
+# Métodos: calcular_salario() (debe sumar el bono gerencial al salario calculado en la clase base)
+# Desarrollador (hereda de Empleado) <lenguaje_programación, horas_extras>
+# Métodos: calcular_salario() (debe sumar un monto adicional por horas extras al salario calculado en la clase base)
+# a) Implementa las clases con sus constructores, getters y setters.
+# b) Crea instancias de Gerente y Desarrollador y muestra su salario calculado.
+# c) Muestra todos los gerentes que tienen un bono gerencial mayor a 1000.
+# d) Muestra todos los desarrolladores que trabajan más de 10 horas extras.
+
+# a) Implementación de las clases
+
 class Empleado:
     def __init__(self, nombre, apellido, salario_base, anos_antiguedad):
         self.nombre = nombre
@@ -40,6 +54,8 @@ class Desarrollador(Empleado):
         print(f"Desarrollador: {self.nombre} {self.apellido} | Lenguaje: {self.lenguaje_programacion} | Horas extras: {self.horas_extras} | Salario calculado: {self.calcular_salario():.2f}")
 
 
+# b) Crear instancias de Gerente y Desarrollador y mostrar salario calculado
+
 def main():
     gerentes = [
         Gerente("Juan", "Perez", 3000, 5, "Finanzas", 1200),
@@ -59,11 +75,13 @@ def main():
     for d in desarrolladores:
         d.mostrar()
 
+    # c) Mostrar gerentes con bono mayor a 1000
     print("\nGerentes con bono gerencial mayor a 1000:")
     for g in gerentes:
         if g.bono_gerencial > 1000:
             g.mostrar()
 
+    # d) Mostrar desarrolladores con más de 10 horas extras
     print("\nDesarrolladores con más de 10 horas extras:")
     for d in desarrolladores:
         if d.horas_extras > 10:

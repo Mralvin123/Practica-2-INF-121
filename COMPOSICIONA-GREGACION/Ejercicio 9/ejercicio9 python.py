@@ -1,3 +1,18 @@
+# Enunciado:
+# 9. Crea un POO para un carrito de compras y sus productos.
+# El carrito contiene productos, pero los productos pueden existir independientemente del carrito.
+# Además, el carrito no puede contener más de 10 productos.
+#
+# Producto <nombre, precio>
+# Métodos: mostrar_info() (muestra el nombre y el precio del producto)
+#
+# CarritoCompras <productos (lista de objetos Producto)>
+# Métodos: agregar_producto(producto), mostrar_carrito() (muestra la info de todos los productos en el carrito)
+#
+# a) Implementa las clases con sus constructores, getters y setters.
+# b) Crea un carrito de compras y agrega varios productos, validando que no se exceda el límite de 10 productos.
+# c) Muestra la información del carrito y sus productos.
+
 class Producto:
     def __init__(self, nombre, precio):
         self.nombre = nombre
@@ -24,6 +39,7 @@ class CarritoCompras:
             for producto in self.productos:
                 producto.mostrar_info()
 
+# b) Crear carrito y agregar productos
 p1 = Producto("Laptop", 950.00)
 p2 = Producto("Mouse", 25.99)
 p3 = Producto("Teclado", 45.00)
@@ -38,4 +54,5 @@ for i in range(8):
 
 carrito.agregar_producto(Producto("Producto fuera de límite", 1.00))
 
+# c) Mostrar la información del carrito y sus productos
 carrito.mostrar_carrito()
